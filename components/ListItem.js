@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightblue',
     flex: 1,
     flexDirection: 'row',
-    marginBottom: '5px',
+    marginBottom: 5,
   },
   imageStyle: {
     height: '100%',
