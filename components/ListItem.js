@@ -5,7 +5,7 @@ import {StyleSheet, Image, Text, View, FlatList, SafeAreaView, TouchableOpacity 
 const ListItem = (props) => {
   return (
     <TouchableOpacity style={styles.touchableStyle}>
-      <View style={styles.viewStyle}>
+      <View style={styles.imageViewStyle}>
         <Image
           style={styles.imageStyle}
           source={{uri: props.singleMedia.thumbnails.w160}}
@@ -24,15 +24,30 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightblue',
     flex: 1,
     flexDirection: 'row',
-    marginBottom: 5,
+    alignSelf: 'stretch',
+    margin: 10,
+    elevation: 4, // Android
+    borderRadius: 2,
+    borderStyle: "solid",
+    borderWidth: 1
   },
   imageStyle: {
-    height: '100%',
-    marginBottom: '100%'
+    height: 100,
+    width: 100,
+    borderRadius: 100 / 2,
+    marginBottom: '30%',
+    marginLeft: "10%",
+    marginTop: "30%"
   },
   textStyle:{
+    fontSize: 18,
+    color: "darkgreen"
   },
   viewStyle:{
+    margin: 5,
+    flex: 2
+  },
+  imageViewStyle:{
     margin: 5,
     flex: 1
   },

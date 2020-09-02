@@ -6,7 +6,7 @@ const mediaArray = [
   {
     'key': '0',
     'title': 'Title 1',
-    'description': 'dd',
+    'description': 'Phasellus imperdiet nunc tincidunt molestie vestibulum. Donec dictum suscipit nibh. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula',
     'thumbnails': {
       w160: 'http://placekitten.com/160/161',
     },
