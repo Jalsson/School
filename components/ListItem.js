@@ -8,12 +8,12 @@ const ListItem = (props) => {
       <View style={styles.viewStyle}>
         <Image
           style={styles.imageStyle}
-          source={{uri: props.singleMedia.thumbnails.w160}}
+          source={{uri: props.item.thumbnails.w160}}
         />
       </View>
       <View style={styles.viewStyle}>
-        <Text style={styles.textStyle}>{props.singleMedia.title}</Text>
-        <Text>{props.singleMedia.description}</Text>
+        <Text style={styles.textStyle}>{props.item.title}</Text>
+        <Text>{props.item.description}</Text>
       </View>
     </TouchableOpacity>
   );
