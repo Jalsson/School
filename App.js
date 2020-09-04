@@ -1,24 +1,10 @@
-import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {StyleSheet, Text, View, FlatList, SafeAreaView,} from 'react-native';
-import List from './components/List'
+import Navigator from './navigators/Navigator';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <List />
-      <StatusBar style="auto" />
-    </SafeAreaView>
+      <Home></Home>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    paddingTop: 3
-  },
- });
 
 export default App;
