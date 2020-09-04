@@ -3,7 +3,7 @@ import Navigator from './navigators/Navigator';
 
 const App = () => {
   return (
-      <Home></Home>
+      <Navigator></Navigator>
   );
 };
 
