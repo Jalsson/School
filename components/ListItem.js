@@ -1,41 +1,65 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import {StyleSheet, Image, Text, View, FlatList, SafeAreaView, TouchableOpacity } from 'react-native'
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+import PropTypes from 'prop-types';
 
-const ListItem = (props) => {
+const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
+
+const ListItem = ({navigation, singleMedia}) => {
   return (
-    <TouchableOpacity style={styles.touchableStyle}>
-      <View style={styles.viewStyle}>
+    <TouchableOpacity style={styles.row} onPress={
+      () => {
+        navigation.navigate('Single', {file: singleMedia});
+      }
+    }>
+      <View style={styles.imagebox}>
         <Image
-          style={styles.imageStyle}
-          source={{uri: props.item.thumbnails.w160}}
+          style={styles.image}
+          source={{uri: mediaUrl + singleMedia.thumbnails.w160}}
         />
       </View>
-      <View style={styles.viewStyle}>
-        <Text style={styles.textStyle}>{props.item.title}</Text>
-        <Text>{props.item.description}</Text>
+      <View style={styles.textbox}>
+        <Text style={styles.listTitle}>{singleMedia.title}</Text>
+        <Text>{singleMedia.description}</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  touchableStyle: {
-    backgroundColor: 'lightblue',
-    flex: 1,
+  row: {
     flexDirection: 'row',
+    padding: 15,
     marginBottom: 5,
+    backgroundColor: '#eee',
+    borderRadius: 16,
   },
-  imageStyle: {
-    height: '100%',
-    marginBottom: '100%'
+  imagebox: {
+    flex: 1,
   },
-  textStyle:{
+  image: {
+    flex: 1,
+    borderRadius: 16,
   },
-  viewStyle:{
-    margin: 5,
-    flex: 1
+  textbox: {
+    flex: 2,
+    padding: 10,
+  },
+  listTitle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingBottom: 15,
   },
 });
 
-export default ListItem
+ListItem.propTypes = {
+  singleMedia: PropTypes.object,
+  navigation: PropTypes.object,
+};
+
+export default ListItem;
