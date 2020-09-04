@@ -1,5 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Home from '../views/Home';
 import Profile from '../views/Profile';
@@ -7,6 +8,7 @@ import Single from '../views/Single';
 // TODO: add neccessary imports
 
 // add after createBottomTabNavigator
+const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const TabScreen = () => {
