@@ -5,6 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from '../views/Home';
 import Profile from '../views/Profile';
 import Single from '../views/Single';
+import Login from '../views/Login';
+import {AuthContext} from '../contexts/AuthContext';
 // TODO: add neccessary imports
 
 // add after createBottomTabNavigator
@@ -21,7 +23,7 @@ const TabScreen = () => {
   };
 
   const StackScreen = () => {
-    const isLoggedIn = false;
+    const [isLoggedIn] = useContext(AuthContext);
     return (
       <Stack.Navigator>
         {isLoggedIn ? (

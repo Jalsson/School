@@ -1,10 +1,19 @@
 import React from 'react';
 import {StyleSheet, SafeAreaView, Text} from 'react-native';
 
-const Profile = () => {
+const Profile = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useContext(AuthContext);
+  console.log('profile', isLoggedIn);
+  const logout = () => {
+    setIsLoggedIn(false);
+    if (!isLoggedIn) { // this is to make sure isLoggedIn has changed, will be removed later
+      props.navigation.navigate('Login');
+    }
+  };
   return (
     <SafeAreaView style={styles.container}>
       <Text>Profile</Text>
+      <Button title={'Logout'} onPress={logout} />
     </SafeAreaView>
   );
 };
