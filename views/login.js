@@ -5,6 +5,7 @@ import {
   Text,
   Button,
 } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import PropTypes from 'prop-types';   
 
 const Login = (props) => { // props is needed for navigation
