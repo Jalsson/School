@@ -14,6 +14,13 @@ const Home = ({navigation}) => {
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 10,
+  },
+});
+
 
 Home.propTypes = {
   navigation: PropTypes.object,
