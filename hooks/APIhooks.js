@@ -21,6 +21,30 @@ const postLogIn = async (userCreds) => {
   }
 };
 
+const useLoadMedia = () => {
+    const [mediaArray, setMediaArray] = useState([]);
+    const loadMedia = async () => {
+      try {
+        const response = await fetch(apiUrl + 'media');
+        const json = await response.json();
+        const media = await Promise.all(json.map(async (item) => {
+          const resp2 = await fetch(apiUrl + 'media/' + item.file_id);
+          const json2 = await resp2.json();
+          return json2;
+        }));
+        // console.log('loadMedia', media);
+        setMediaArray(media);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    useEffect(() => {
+      loadMedia();
+    }, []);
+  
+    return mediaArray;
+  };
+
 const checkToken = async (token) => {
   const options = {
     method: 'GET',
