@@ -2,8 +2,7 @@
    69  cd git-intro/
    70  git remote help
    71  git remote rm origin
-   72  git remote set -url https://github.com/Jalsson/git-training
-   73  git remote set-url https://github.com/Jalsson/git-training
-   74  git add .
-   75  git push origin master
-   76  git remote set-url git@github.com:jalsson/git-training.git
+   72  git remote set-url https://github.com/Jalsson/git-training
+   73  git add .
+   74  git push origin master
+   75  git remote set-url git@github.com:jalsson/git-training.git
