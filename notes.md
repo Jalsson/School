@@ -6,3 +6,6 @@
    73  git add .
    74  git push origin master
    75  git remote set-url git@github.com:jalsson/git-training.git
+   81  git add .
+   82  git commit -m "added notes"
+   83  git push origin master
