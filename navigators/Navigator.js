@@ -20,14 +20,23 @@ const TabScreen = () => {
     );
   };
 
-const StackScreen = () => {
- return (
-    <Stack.Navigator>
-      <Stack.Screen name='Home' component={TabScreen} />
-      <Stack.Screen name='Single' component={Single} />
-    </Stack.Navigator>
- );
-};
+  const StackScreen = () => {
+    const isLoggedIn = false;
+    return (
+      <Stack.Navigator>
+        {isLoggedIn ? (
+          <>
+            <Stack.Screen name="Home" component={TabScreen}/>
+            <Stack.Screen name="Single" component={Single}/>
+          </>
+        ) : (
+          <>
+            <Stack.Screen name="Login" component={Login}/>
+          </>
+        )}
+      </Stack.Navigator>
+    );
+  };
 
 const Navigator = () => {
  return (
