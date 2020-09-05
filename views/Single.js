@@ -21,27 +21,6 @@ const Single = ({route}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    padding: 15,
-  },
-  imagebox: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    width: '100%',
-  },
-  description: {
-    padding: 15,
-  },
-});
 
 Single.propTypes = {
   route: PropTypes.object,

@@ -31,32 +31,6 @@ const ListItem = ({navigation, singleMedia}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    padding: 15,
-    marginBottom: 5,
-    backgroundColor: '#eee',
-    borderRadius: 16,
-  },
-  imagebox: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    borderRadius: 16,
-  },
-  textbox: {
-    flex: 2,
-    padding: 10,
-  },
-  listTitle: {
-    fontWeight: 'bold',
-    fontSize: 20,
-    paddingBottom: 15,
-  },
-});
-
 ListItem.propTypes = {
   singleMedia: PropTypes.object,
   navigation: PropTypes.object,
